@@ -1,0 +1,76 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c6ff0">
+        <animate attributeName="stop-color" values="#7c6ff0;#4f7cff;#22d3c8;#4f7cff;#7c6ff0" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#4f7cff">
+        <animate attributeName="stop-color" values="#4f7cff;#22d3c8;#7c6ff0;#22d3c8;#4f7cff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f7cff"/>
+      <stop offset="100%" stop-color="#22d3c8"/>
+    </linearGradient>
+    <filter id="blurA" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <clipPath id="clip"><rect x="0" y="0" width="1200" height="300" rx="18"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="300" fill="#0a0e17"/>
+
+    <circle cx="120" cy="60" r="170" fill="#7c6ff0" opacity="0.28" filter="url(#blurA)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 40,25; -15,45; 0,0" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.22;0.34;0.22" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1080" cy="240" r="150" fill="#4f7cff" opacity="0.26" filter="url(#blurA)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -35,-20; 20,15; 0,0" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.32;0.2" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="620" cy="290" r="110" fill="#22d3c8" opacity="0.18" filter="url(#blurA)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -20,-30; 25,10; 0,0" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.14;0.24;0.14" dur="9s" repeatCount="indefinite"/>
+    </circle>
+
+    <rect width="1200" height="300" fill="none" stroke="#1e2740" stroke-width="2"/>
+
+    <!-- badge -->
+    <g>
+      <rect x="500" y="66" width="200" height="28" rx="14" fill="#11162a" stroke="#1e2740"/>
+      <text x="600" y="85" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#grad1)" text-anchor="middle">FULL-STACK DEVELOPER</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="3.2s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- name -->
+    <text x="600" y="152" font-family="Segoe UI, sans-serif" font-size="52" font-weight="800" fill="url(#grad1)" text-anchor="middle">
+      Shantanu Niwalkar
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="0.1s" fill="freeze"/>
+    </text>
+
+    <!-- role line (typewriter-esque reveal via clip) -->
+    <clipPath id="roleClip">
+      <rect x="0" y="170" width="0" height="30">
+        <animate attributeName="width" values="0;620;620;0" keyTimes="0;0.35;0.85;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <text x="600" y="190" font-family="Segoe UI, sans-serif" font-size="22" font-weight="600" fill="#f4f5f7" text-anchor="middle" clip-path="url(#roleClip)">React &amp; Angular Developer &#183; ASP.NET Core &amp; Node.js</text>
+    <rect x="290" y="172" width="2.5" height="20" fill="#22d3c8">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.35;0.4;0.85;0.9" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;620,0;620,0;0,0;0,0" keyTimes="0;0.35;0.85;0.9;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- tagline -->
+    <text x="600" y="222" font-family="Segoe UI, sans-serif" font-size="14" fill="#8992a8" text-anchor="middle">
+      Building the KONTO &amp; XBook ERP systems &#183; Open to Frontend / Full-Stack roles
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="0.6s" fill="freeze"/>
+    </text>
+
+    <!-- decorative underline -->
+    <rect x="510" y="240" width="180" height="3" rx="1.5" fill="url(#grad2)">
+      <animate attributeName="width" values="0;180" dur="1.2s" begin="0.3s" fill="freeze"/>
+      <animate attributeName="x" values="600;510" dur="1.2s" begin="0.3s" fill="freeze"/>
+    </rect>
+  </g>
+</svg>

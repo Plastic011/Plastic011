@@ -1,0 +1,23 @@
+<svg width="1200" height="24" viewBox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dbase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e2740"/>
+      <stop offset="100%" stop-color="#1e2740"/>
+    </linearGradient>
+    <linearGradient id="dsweep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c6ff0" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4f7cff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3c8" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="dclip"><rect x="0" y="10" width="1200" height="4"/></clipPath>
+  </defs>
+  <rect x="0" y="11" width="1200" height="2" fill="url(#dbase)"/>
+  <g clip-path="url(#dclip)">
+    <rect x="-400" y="8" width="400" height="8" fill="url(#dsweep)">
+      <animate attributeName="x" values="-400;1200" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <circle cx="600" cy="12" r="4" fill="#f4f5f7">
+    <animate attributeName="r" values="3;5;3" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
